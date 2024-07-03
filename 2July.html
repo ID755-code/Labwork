@@ -1,23 +1,56 @@
 <!DOCTYPE html> 
-<html> 
-    <head>
-        <title> July-2 MySQL</title>
-
-    </head>
-    <body>
-        1. CREATE DATABASE GRADE12;<br>
-        2. CREATE TABLE SECTIONG<BR>
-            (ID INT(3) PRIMARY KEY AUTO_INCREMENT,
-            NAME VARCHAR(255),
-            PHONE BIGINT(10),
-            GENDER VARCHAR(30)
-            );<br>
-        
-        3. In Database Terminal,<br>
-           DROP TABLE SECTIONG;<br>
-
-        4. In Server Terminal,<br>
-           ADD COLUMN AGE INT(3);
-
-    </body>
+<html>
+<head>
+    <title>July-2 MySQL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            margin: 20px;
+        }
+        .content {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            color: #e74c3c;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .code {
+            background-color: #2c3e50;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ecf0f1;
+            font-family: 'Courier New', Courier, monospace;
+            color: #1abc9c;
+        }
+        .code span {
+            color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>July-2 MySQL</h1>
+        <p>1. <span class="code">CREATE DATABASE GRADE12;</span></p>
+        <p>2. <span class="code">CREATE TABLE SECTIONG<br>
+            (ID INT(3) PRIMARY KEY AUTO_INCREMENT,<br>
+            NAME VARCHAR(255),<br>
+            PHONE BIGINT(10),<br>
+            GENDER VARCHAR(30)<br>
+            );</span></p>
+        <p>3. In Database Terminal,<br>
+           <span class="code">DROP TABLE SECTIONG;</span></p>
+        <p>4. In Server Terminal,<br>
+           <span class="code">ADD COLUMN AGE INT(3);</span></p>
+    </div>
+</body>
 </html>
