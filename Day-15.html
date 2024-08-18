@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Security, Integrity, and Anomalies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #f39c12;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 2px solid #f39c12;
+            border-radius: 8px;
+            background-color: #2c2c2c;
+        }
+
+        h2 {
+            color: #e67e22;
+            margin-top: 20px;
+        }
+
+        pre {
+            background-color: #333;
+            color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        ul {
+            list-style-type: square;
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #1e1e1e;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Security, Integrity, and Anomalies</h1>
+
+    <div class="section">
+        <h2>Layers of Data Security</h2>
+        <p>Securing data in a Database Management System (DBMS) involves multiple layers to protect against unauthorized access and breaches:</p>
+        <ul>
+            <li><strong>Authentication:</strong> Verifies the identity of users through methods like passwords, biometrics, or multi-factor authentication.</li>
+            <li><strong>Authorization:</strong> Determines user permissions and roles, controlling access to different database operations.</li>
+            <li><strong>Encryption:</strong> Secures data both at rest and in transit by making it unreadable without the decryption key.</li>
+            <li><strong>Auditing and Monitoring:</strong> Tracks and logs database activities to detect and respond to security violations or breaches.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Layers of Data Integrity</h2>
+        <p>Data integrity ensures accuracy, consistency, and reliability of data within a DBMS through various constraints and validation rules:</p>
+        <ul>
+            <li><strong>Entity Integrity:</strong> Requires each table to have a primary key to ensure unique and identifiable records.</li>
+            <li><strong>Referential Integrity:</strong> Maintains consistent relationships between tables using valid foreign key references.</li>
+            <li><strong>Domain Integrity:</strong> Ensures data entries conform to predefined rules or constraints, such as data types or ranges.</li>
+            <li><strong>User-defined Integrity:</strong> Implements additional rules specific to business needs for further control over data validity.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Types of Anomalies in DBMS</h2>
+        <p>Anomalies refer to inconsistencies or issues arising from improper database design or manipulation:</p>
+        <ul>
+            <li><strong>Update Anomalies:</strong> Occur when changes in one part of the database require corresponding updates in other parts, leading to discrepancies. For example, updating a customer's address in one record but not in all related records.</li>
+            <li><strong>Insertion Anomalies:</strong> Arise when the database schema design makes it difficult to add new data without introducing inconsistencies or null values. For instance, requiring data to be inserted into multiple tables simultaneously.</li>
+            <li><strong>Deletion Anomalies:</strong> Happen when removing data inadvertently causes the loss of other valuable information. For example, deleting a student record might also remove associated course information.</li>
+        </ul>
+        <p>Normalization techniques can help address these anomalies by designing the database schema to minimize redundancy and ensure data consistency.</p>
+    </div>
+</body>
+</html>

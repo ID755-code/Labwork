@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Models</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #f39c12;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 2px solid #f39c12;
+            border-radius: 8px;
+            background-color: #2c2c2c;
+        }
+
+        h2 {
+            color: #e67e22;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 15px;
+            text-indent: -15px;
+        }
+
+        li::before {
+            content: "• ";
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <h1>Database Models</h1>
+
+    <div class="section">
+        <h2>Hierarchical Database Model</h2>
+        <p>
+            The hierarchical database model organizes data in a tree-like structure, where each record has a single parent and potentially multiple children. This model is efficient for data with clear hierarchical relationships and was popular in early database systems, especially in mainframe environments.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Network Database Model</h2>
+        <p>
+            The network database model extends the hierarchical model by allowing many-to-many relationships between records. It uses a graph structure where nodes represent records and edges represent relationships. This model offers greater flexibility and can handle complex data relationships better than the hierarchical model.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Relational Database Model</h2>
+        <p>
+            The relational database model organizes data into tables (relations), where each table consists of rows (tuples) and columns (attributes). Relationships between tables are established through keys. This model, introduced by E.F. Codd, is based on set theory and predicate logic, offering a flexible and powerful way to manage structured data. It is widely used in modern database management systems (DBMS).
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Object-Oriented Database Model</h2>
+        <p>
+            The object-oriented database model represents data as objects, similar to object-oriented programming. These objects encapsulate data (attributes) and behaviors (methods). This model allows complex data structures to be represented more naturally than in relational databases, making it suitable for applications with rich, interconnected data.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Conclusion</h2>
+        <p>
+            Each database model has its strengths and weaknesses, making them suitable for different types of applications and data management scenarios. Choosing the right model depends on the specific needs of the application and the nature of the data.
+        </p>
+    </div>
+</body>
+</html>

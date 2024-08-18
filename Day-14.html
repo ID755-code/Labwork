@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Normalization</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #bb86fc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #1e1e1e;
+        }
+    </style>
+</head>
+<body>
+    <h1>Database Normalization</h1>
+    <p>Database normalization is the process of organizing data within a relational database to reduce redundancy and improve data integrity.</p>
+
+    <h2>Purposes of Normalization:</h2>
+    <ul>
+        <li><strong>Data Redundancy:</strong> Without normalization, the same data might be stored in multiple places, leading to inefficiency and increased storage requirements.</li>
+        <li><strong>Data Integrity:</strong> Normalization ensures accurate data by preventing anomalies like insert, update, and delete issues.</li>
+        <li><strong>Efficient Queries:</strong> Well-normalized databases allow faster query execution.</li>
+    </ul>
+
+    <h2>Normal Forms:</h2>
+    <h3>First Normal Form (1NF):</h3>
+    <p>Ensures that each column contains only atomic (indivisible) values. No repeating groups or arrays.</p>
+
+    <h3>Second Normal Form (2NF):</h3>
+    <p>Builds on 1NF by eliminating partial dependencies. All non-key attributes depend entirely on the primary key.</p>
+
+    <h3>Third Normal Form (3NF):</h3>
+    <p>Further reduces redundancy by removing transitive dependencies. Non-key attributes depend only on the primary key.</p>
+
+    <h2>Example:</h2>
+    <p>Imagine a student database with columns like Student ID, Student Name, Fees Paid, Course Name, and Classes. If we normalize this, we’d split it into separate tables for students, courses, and classes, linking them through keys.</p>
+
+    <h3>Original Table (Unnormalized):</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Fees Paid</th>
+                <th>Course Name</th>
+                <th>Classes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Alice</td>
+                <td>500</td>
+                <td>Math</td>
+                <td>101</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Alice</td>
+                <td>500</td>
+                <td>Science</td>
+                <td>102</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Bob</td>
+                <td>400</td>
+                <td>Math</td>
+                <td>101</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Normalized Tables:</h3>
+
+    <h4>Students Table:</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Alice</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Bob</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Courses Table:</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Course Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>Math</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Science</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Classes Table:</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Class ID</th>
+                <th>Course ID</th>
+                <th>Class Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>101</td>
+                <td>Math 101</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>102</td>
+                <td>Science 102</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Enrollments Table:</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Course ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>101</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>102</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>101</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Additional Considerations:</h2>
+    <ul>
+        <li><strong>Boyce-Codd Normal Form (BCNF):</strong> A stronger version of 3NF that deals with certain types of anomalies not handled by 3NF. It is worth considering for more complex databases.</li>
+        <li><strong>Fourth Normal Form (4NF) and Beyond:</strong> These handle multi-valued dependencies and further reduce redundancy. They are more advanced and often used in complex databases.</li>
+    </ul>
+    
+    <p>Normalization is essential for creating a database that is both efficient and scalable, but keep in mind that over-normalization can sometimes lead to performance issues due to excessive table joins. Balancing normalization with practical performance considerations is key.</p>
+</body>
+</html>
