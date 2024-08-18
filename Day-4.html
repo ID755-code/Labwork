@@ -3,48 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SQL Example</title>
+    <title>Database Keys</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #2c3e50;
-            color: #ecf0f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
         .container {
-            text-align: center;
-            background-color: #34495e;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            border: 2px solid #ecf0f1;
-            border-radius: 5px;
-        }
-        h1, h2 {
-            margin: 10px 0;
+            background-color: #1f1f1f;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            margin-top: 30px;
         }
         h1 {
-            font-size: 2em;
-            color: #e74c3c;
+            text-align: center;
+            color: #64ffda;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         h2 {
-            font-size: 1.5em;
-            color: #f1c40f;
+            color: #bb86fc;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #64ffda;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>SQL Example</h1>
-        <h2>Database Creation</h2>
-        <img src="images/Screenshot 2024-07-01 200510.png" alt="SQL Code">
-        <h2>Query Result</h2>
-        <img src="images/Screenshot 2024-07-01 200701.png" alt="Query Result">
+        <h1>Database Keys</h1>
+
+        <p>In databases, keys are essential for uniquely identifying records within tables. They serve as identifiers or labels that ensure each record can be distinguished from others. Keys play a vital role in maintaining data integrity and establishing relationships between different tables in a database.</p>
+
+        <h2>Super Key</h2>
+        <p>A super key is a set of one or more keys that can uniquely identify a record within a table. It could include one or multiple columns that together ensure each record is unique. Super keys are broader than candidate keys and can include more columns than necessary to uniquely identify a record.</p>
+
+        <h2>Candidate Key</h2>
+        <p>A candidate key is a subset of a super key that uniquely identifies a record in a table. It meets the criteria for uniqueness and can be chosen as the primary key. A table may have multiple candidate keys, and the primary key is selected from these.</p>
+
+        <h2>Primary Key</h2>
+        <p>The primary key is the chosen candidate key that uniquely identifies each record in a table. It cannot contain duplicate values or NULL values. It serves as the main identifier for records and is crucial for maintaining data integrity and establishing relationships between tables.</p>
+
+        <h2>Alternate Key</h2>
+        <p>An alternate key is a candidate key that is not selected as the primary key but remains available as an alternative choice. It provides redundancy and can be used if the primary key becomes invalid or is no longer suitable.</p>
+
+        <h2>Foreign Key</h2>
+        <p>A foreign key is a column or a group of columns in one table that references the primary key or a unique key of another table. It establishes a relationship between the two tables by enforcing referential integrity. The values in the foreign key must match the values in the referenced primary or unique key column in another table.</p>
+
+        <h2>Composite Key</h2>
+        <p>A composite key is a combination of two or more columns that together uniquely identify a record in a table. Individually, each column in the composite key may not be unique, but their combination ensures uniqueness. It is useful when no single column can uniquely identify a record.</p>
+
+        <h2>Artificial Key</h2>
+        <p>An artificial key, also known as a surrogate key, is a key created specifically for identification purposes rather than being derived from the data itself. It is often an auto-incremented number generated by the database system to ensure each record gets a unique identifier automatically. Artificial keys simplify the management of data and improve performance in querying and indexing operations.</p>
     </div>
+
 </body>
 </html>

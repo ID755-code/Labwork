@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Up XAMPP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #dcdcdc;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+            margin-top: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #ff8c00;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: #4caf50;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        ol {
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+        ol li {
+            margin-bottom: 15px;
+        }
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p, ol li {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Setting Up XAMPP</h1>
+        <ol>
+            <li>
+                <h2>Download XAMPP</h2>
+                <p>
+                    Visit the official Apache Friends website at <a href="https://www.apachefriends.org/index.html" target="_blank">https://www.apachefriends.org</a> and download the XAMPP installer for your operating system (Windows, macOS, Linux).
+                </p>
+            </li>
+            <li>
+                <h2>Run the Installer</h2>
+                <p>
+                    After downloading, open the installer file (e.g., <span class="highlight">xampp-installer.exe</span> on Windows). Follow the on-screen instructions to start the installation process.
+                </p>
+            </li>
+            <li>
+                <h2>Select Components</h2>
+                <p>
+                    During the installation, you'll be asked to choose components. By default, <span class="highlight">Apache</span>, <span class="highlight">MySQL</span>, <span class="highlight">PHP</span>, and <span class="highlight">phpMyAdmin</span> are selected. Unless you have specific needs, you can leave these settings as they are.
+                </p>
+            </li>
+            <li>
+                <h2>Choose Installation Directory</h2>
+                <p>
+                    Specify where you want to install XAMPP. The default directory is <span class="highlight">C:\xampp</span> on Windows and <span class="highlight">/Applications/XAMPP</span> on macOS. You can change this directory if desired.
+                </p>
+            </li>
+            <li>
+                <h2>Complete the Installation</h2>
+                <p>
+                    Click "Next" or "Install" to continue. Wait for the installation to finish, which might take a few minutes depending on your system.
+                </p>
+            </li>
+            <li>
+                <h2>Start XAMPP</h2>
+                <p>
+                    After installation, open the XAMPP Control Panel. On Windows, you can find it in the Start menu or on the desktop. On macOS, it’s in the Applications folder. Start the <span class="highlight">Apache</span> and <span class="highlight">MySQL</span> modules by clicking the "Start" button next to each.
+                </p>
+            </li>
+            <li>
+                <h2>Verify the Installation</h2>
+                <p>
+                    Open your web browser and type <span class="highlight">http://localhost</span> in the address bar. If everything is set up correctly, you should see the XAMPP dashboard, confirming that Apache and MySQL are running.
+                </p>
+            </li>
+        </ol>
+        <p>
+            Follow these steps, and you'll have XAMPP successfully set up on your computer, ready for web development.
+        </p>
+    </div>
+</body>
+</html>
